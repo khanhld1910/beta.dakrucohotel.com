@@ -16,6 +16,8 @@
             if (uploadFile.ContentLength > 0) {
                 var fileName = uploadFile.FileName;
                 var path = Server.MapPath("~/App_Data/UploadedFiles/");
+                var aaa = Path.GetFileNameWithoutExtension(Server.MapPath(fileName));
+                message = aaa;
                 var fileSavePath = path + fileName;
                 if (!Directory.Exists(path)) {
                     // check and create directory if it is not exists
@@ -25,7 +27,7 @@
                 uploadedCount++;
             };
         }
-        message = "File upload complete. Total files uploaded: " + uploadedCount.ToString();
+        //message = "File upload complete. Total files uploaded: " + uploadedCount.ToString();
         //Response.Redirect("~/tests/MediaUpload");
     };
 }
