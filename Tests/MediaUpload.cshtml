@@ -5,38 +5,30 @@
     Page.Title = "Upload";
 
     var message = "";
-    var log = "";
+    var log = "!!!!!, ";
+
     if (IsPost) {
-        var fileName = "";
-        var fileSavePath = "";
         int numFiles = Request.Files.Count;
         int uploadedCount = 0;
+
         for (int i = 0; i < numFiles; i++) {
-            var uploadedFile = Request.Files[i];
-            if (
-                uploadedFile.ContentType.ToLower() != "jpg" &&
-                uploadedFile.ContentType.ToLower() != "jpeg" &&
-                uploadedFile.ContentType.ToLower() != "gif" &&
-                uploadedFile.ContentType.ToLower() != "png" &&
-                uploadedFile.ContentType.ToLower() != "svg" &&
-                uploadedFile.ContentType.ToLower() != "WebP" &&
-                uploadedFile.ContentType.ToLower() != "bitmap") {
-                continue;
-            };
-            var path = Server.MapPath("~/App_Data/UploadedFiles/");
-            if (uploadedFile.ContentLength > 0) {
-                fileName = Path.GetFileName(uploadedFile.FileName);
+            var fileName = Request.Files[i].FileName;
+            WebImage image = WebImage.GetImageFromRequest(fileName);
+
+            log += fileName + ", ";
+            if (image != null) {
+                var path = Server.MapPath("~/App_Data/UploadedFiles/");
+                var fileSavePath = path + fileName;
                 if (!Directory.Exists(path)) {
                     // check and create directory if it is not exists
                     Directory.CreateDirectory(path);
                 };
-                fileSavePath = path + fileName;
-                uploadedFile.SaveAs(fileSavePath);
+                image.Save(fileSavePath);
                 uploadedCount++;
             };
         }
         message = "File upload complete. Total files uploaded: " + uploadedCount.ToString();
-        Response.Redirect("~/tests/MediaUpload");
+        //Response.Redirect("~/tests/MediaUpload");
     };
 }
 
@@ -45,21 +37,19 @@
 
 @section featured {
     <section class="featured" style="margin: 50px auto;">
-        <form id="myForm" method="post"
-              enctype="multipart/form-data"
-              action="">
+        <form id="myForm" method="post">
             <div>
                 <h1>File Upload - Multiple-File Example</h1>
-                @if (!IsPost) {
-                    @FileUpload.GetHtml(
+
+                @FileUpload.GetHtml(
                     initialNumberOfFiles: 2,
                     allowMoreFilesToBeAdded: true,
                     includeFormTag: true,
                     addText: "Add another file",
                     uploadText: "Upload")
-                }
+
                 <span>@message</span>
-                <span>@log</span>
+                <p>@log</p>
             </div>
         </form>
     </section>
