@@ -1,0 +1,86 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+ body {
+ 	background-color: $primary-color-light;
+ }
+
+ header {
+ 	position: relative;
+ 	#logo {
+ 		z-index: 99;
+ 		position: absolute;
+ 		padding: 20px;
+ 		top: 0px;
+ 		left: 0px;		
+ 	}
+ }
+
+ .slide-item {
+ 	background-color: #000;
+ 	img {
+ 		opacity: 0.6;
+ 	}
+ 	.caption {
+ 		h3 {
+ 			color: $primary-color-text;
+ 		}
+ 		h5 {
+ 			color: $primary-color-text;
+ 		}
+ 	}
+ }
+
+ #admin-bar {
+ 	height: 32px;
+ 	padding: 5px;
+ 	background-color: $primary-color-dark;
+ 	border-bottom: 1px solid $divider-color;
+ 	& * {
+ 		color: $primary-color-text;
+ 	}
+ }
+
+ main {
+ 	background-color: $main-background-color;
+ 	padding: 20px;
+ 	section {
+ 		margin-top: 20px;
+ 		.section-title {
+ 			.line {
+ 				height: 2px;
+ 				background-color: $primary-color-dark;
+ 				width: 25%;
+ 				margin: 0 auto 20px;
+ 			}
+ 			h5 {
+ 				text-transform: uppercase;
+ 				span {
+ 					color: $primary-color;
+ 					font-weight: 700;
+ 				}
+ 			}
+ 		}
+ 		.img-col {
+ 			img {
+ 				object-fit: cover;
+ 				align-items: center;
+ 			}
+ 		}
+
+ 		&.counter {
+ 			.timer {
+ 				background-color: rgba(0, 0, 0, 0.2);
+ 				color: $secondary-text-color;
+ 				padding: 10px;
+ 				text-transform: uppercase;
+ 				h2 {
+ 					color: $primary-color;
+ 					font-weight: 700;
+ 				}
+ 			}
+ 		}
+ 	}
+ }

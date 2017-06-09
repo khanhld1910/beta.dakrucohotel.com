@@ -3,20 +3,158 @@
     Page.Title = "Trang Chủ";
 }
 
-@section featured {
-<section class="featured">
-    <div class="content-wrapper">
-        <hgroup class="title">
-            <h1>@Page.Title.</h1>
-            <h2>Modify this template to jump-start your ASP.NET Web Pages application.</h2>
-        </hgroup>
-        <p>
-            To learn more about ASP.NET Web Pages, visit
-            <a href="https://asp.net/webpages" title="ASP.NET Web Pages Website">https://asp.net/webpages</a>.
-            The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET Web Pages.
-            If you have any questions about ASP.NET Web Pages, visit
-            <a href="https://forums.iis.net/1166.aspx" title="ASP.NET Web Pages Forum">our forums</a>.
-        </p>
-    </div>
-</section>
+@section adminbar {
+    @RenderPage("~/Shared/_AdminBar.cshtml")
+}
+
+@section navbar {
+    @RenderPage("~/Shared/_NavBar.cshtml")
+}
+@section header {
+    @RenderPage("~/Shared/_Header.cshtml")
+}
+
+@section footer {
+    @RenderPage("~/Shared/_Footer.cshtml")
+}
+
+@section main {
+    <main>
+        <section id="about-us" class="row table-row">
+            <div class="col s12 m12 l5 img-col valign-wrapper">
+                <img src="~/Images/PageImgs/about-us.jpg" alt="Giới thiệu" class="responsive-img" />
+            </div>
+            <div class="col s12 m12 l7 section-title about-text ">
+                <h5>Về chúng tôi: <span>Dakruco Hotel</span></h5>
+                <div class="line" style="margin: 0px; width: 50%;"></div>
+                <blockquote style="text-align: justify;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam nec odio eget interdum. Maecenas laoreet erat nunc, vel molestie nibh convallis ac. Phasellus ut turpis vestibulum, fringilla elit pellentesque, consectetur risus.<br />
+                    Donec eu ultricies sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut volutpat odio at augue sagittis facilisis. Donec sit amet metus viverra, hendrerit erat vitae, porta tellus. Quisque consequat ipsum ipsum, non tristique sem tempor non. Donec vestibulum pellentesque feugiat. Sed in tellus porttitor, sodales ligula eget, placerat magna.
+                </blockquote>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <section id="why-choose-us">
+            <div class="row">
+                <div class="col s10 offset-s1 center-align">
+                    <div class="section-title">
+                        <h5>Tại sao chọn <span>Dakruco Hotel?</span></h5>
+                        <div class="line"></div>
+                        <p>Aenean libero sem, commodo sit amet sem nec, aliquet rutrum lectus. Sed elementum, ligula ut elementum convallis, velit nisl semper nisl, id euismod quam eros bibendum urna.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l6">
+                    <div class="why-choose-us row feature-col">
+                        <ul class="collapsible" data-collapsible="accordion">
+                            <li>
+                                <div class="collapsible-header active">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    Trang bị & Công nghệ hiện đại
+                                </div>
+                                <div class="collapsible-body">
+                                    <p>
+                                        Chúng tôi đặc biệt chú trọng đầu tư trang thiết bị, cập nhật công nghệ y khoa nhằm nâng cao năng lực chuyên môn tại các khoa. Phòng bệnh trang bị wi-fi, ti vi, máy massage miễn phí sau khi người bệnh nằm lâu. Giúp người bệnh có cảm giác thoải mái như đang điều trị tại nhà.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">
+                                    <i class="fa fa-user-md" aria-hidden="true"></i>
+                                    Đội ngũ chuyên môn cao & nhiều kinh nghiệm
+                                </div>
+                                <div class="collapsible-body">
+                                    <p>Môi trường làm việc chuyên nghiệp, đội ngũ có trình độ chuyên môn cao, giàu kinh nghiệm, được đào tạo bài bản và đi tu nghiệp ở những nền y tế tiên tiến, luôn tận tâm với nghề, chẩn đoán chính xác đồng thời đưa ra những lời khuyên bổ ích trong quá trình điều trị của người bệnh. Đặc biệt, tư vấn trực tuyến 24/24 giải đáp mọi câu hỏi và thắc mắc của người bệnh ngay tại nhà.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">
+                                    <i class="fa fa-usd" aria-hidden="true"></i>
+                                    Giá cả rõ ràng & minh bạch
+                                </div>
+                                <div class="collapsible-body">
+                                    <p>
+                                        Tất cả các chi phí (khám bệnh, XN, siêu âm, phương pháp điều trị, thuốc,…) đều được phòng khám báo trước cho người bệnh nắm rõ về các hạng mục giá niêm yết, minh bạch, công khai rõ ràng theo đúng quy định của sở Y tế đưa ra nên rất chính xác và hợp lý. Mỗi người bệnh khi đến Đa khoa Medic City đều không lo gặp phải trình trạng “ Thánh giá ” mà được hổ trợ giảm bảo hiểm (nếu có).
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">
+                                    <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                                    Môi trường thân thiện
+                                </div>
+                                <div class="collapsible-body">
+                                    <p>Các nhân viên tại phòng khám chúng tôi chăm sóc bệnh nhân luôn thân thiện và nhiệt tình, ân cần, chu đáo khi hướng dẫn và giải đáp mọi thắc mắc của người bệnh.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">
+                                    <i class="fa fa-hourglass-start" aria-hidden="true"></i>
+                                    Thủ tục đơn giản & nhanh chóng
+                                </div>
+                                <div class="collapsible-body">
+                                    <p>Tổ chức hệ thống tư vấn trực tuyến, qua facebook, zalo hoặc điện thoại để người bệnh có thể nắm rõ thông tin về bệnh, chi phí và phương pháp điều trị ngay tại nhà. Sau đó đội ngũ bác sĩ sẽ hỗ trợ đặt hẹn sao cho phù hợp để thuận lợi cho người bệnh đến khám bệnh. Từ đó tiết kiệm được một khoảng thời gian rất quý.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">
+                                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                                    Đặt lịch hẹn trực tuyến
+                                </div>
+                                <div class="collapsible-body">
+                                    <p>Người bệnh có thể có thể đặt lịch hẹn tại nhà hoặc công ty qua mạng, hoặc zalo (ĐT: 0162.63.17979), facebook “Medic pkđk” hay có thể liên lạc ngay với bác sĩ tư vấn trực tuyến thông qua tổng đài: 08.62511704 - 08.22533366.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header">
+                                    <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                    Làm việc 24/24 - Không nghỉ lễ
+                                </div>
+                                <div class="collapsible-body">
+                                    <p>Phòng khám có lịch làm việc linh hoạt, không nghỉ kể cả các ngày lễ lớn, nhỏ trong năm. Tạo điều kiện thuận lợi cho những người bệnh là công nhân, nhân viên văn phòng chỉ được nghỉ những ngày cuối tuần. Với những ưu điểm trên, phòng khám Đa khoa Medic City 24H luôn được mọi người tin tưởng và lựa chọn.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col s12 m12 l6 valign-wrapper">
+                    <div class="feature-col img-col">
+                        <img src="~/Images/PageImgs/why-choose-us.jpg" alt="why choose us" class="responsive-img" />
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <div class="divider"></div>
+        <section id="counter-section" class="row counter center-align">
+                <div class="col s12 m3">
+                    <div class="timer">
+                        <p class="counter_title_top">Hơn</p>
+                        <h2 id="counter-1" class="time_counter" data-value="140">300</h2>
+                        <p class="counter_title">Phòng</p>
+                    </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="timer">
+                        <p class="counter_title_top">Đội ngũ</p>
+                        <h2 id="counter-2" class="time_counter" data-value="63">200</h2>
+                        <p class="counter_title">Nhân viên & Phục vụ</p>
+                    </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="timer">
+                        <p class="counter_title_top">Hơn</p>
+                        <h2 id="counter-3" class="time_counter" data-value="1200">1200</h2>
+                        <p class="counter_title">Ngày hoạt động</p>
+                    </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="timer">
+                        <p class="counter_title_top">Tổ chức hơn</p>
+                        <h2 id="counter-4" class="time_counter" data-value="20">300</h2>
+                        <p class="counter_title">Sự kiện lớn nhỏ</p>
+                    </div>
+                </div>
+        </section>
+    </main>
 }

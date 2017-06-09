@@ -2,29 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Dakruco Hotel - @Page.Title</title>    
+    <title>Dakruco Hotel - @Page.Title</title>
     <!--favicon-->
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />      
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--google fonts-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--materialize.css-->
-    <link href="~/Content/stylesheets/materialize.css" rel="stylesheet" media="screen,projection" />    
-    <!--main styles-->
-    <link href="~/Content/stylesheets/screen.css" rel="stylesheet" />    
+    <link href="~/Content/stylesheets/materialize.css" rel="stylesheet" media="screen,projection" />
     <!--scripts-->
     <script src="~/Content/myScripts/jquery-3.2.1.js"></script>
     <script src="~/Content/myScripts/materialize.js"></script>
+    <script src="https://use.fontawesome.com/743594bd55.js"></script>
     <script src="~/Content/myScripts/modernizr-2.6.2.js"></script>
+    <script src="~/Content/myScripts/myScripts.js"></script>
     <!--optimized for mobile-->
     <meta name="viewport" content="width=device-width" />
 </head>
 <body>
-    @RenderPage("~/Shared/_Header.cshtml")
-    <div id="body">
-        @RenderSection("featured", required: false)
-        <section class="content-wrapper main-content clear-fix">
-            @RenderBody()
-        </section>
+    <div class="container">
+        @RenderSection("adminbar", required: false)
+        @RenderSection("header", required: false)
+        @RenderSection("navbar", required: false)
+        @RenderSection("main", required: false)
+        @RenderBody()
+        @RenderSection("footer", required: false)
     </div>
-    @RenderPage("~/Shared/_Footer.cshtml")
     @RenderSection("Scripts", required: false)
 </body>
 </html>
