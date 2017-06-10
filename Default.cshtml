@@ -20,7 +20,7 @@
 
 @section main {
     <main>
-        <section id="about-us" class="row table-row">
+        <section id="about-us" class="row">
             <div class="col s12 m12 l5 img-col valign-wrapper">
                 <img src="~/Images/PageImgs/about-us.jpg" alt="Giới thiệu" class="responsive-img" />
             </div>
@@ -124,37 +124,87 @@
                     </div>
                 </div>
             </div>
-        </section>        
+        </section>
         <div class="divider"></div>
         <section id="counter-section" class="row counter center-align">
-                <div class="col s12 m3">
-                    <div class="timer">
-                        <p class="counter_title_top">Hơn</p>
-                        <h2 id="counter-1" class="time_counter" data-value="140">300</h2>
-                        <p class="counter_title">Phòng</p>
-                    </div>
+            <div class="col s12 m3">
+                <div class="timer">
+                    <p class="counter_title_top">Hơn</p>
+                    <h2 id="counter-1" class="time_counter" data-value="140">300</h2>
+                    <p class="counter_title">Phòng</p>
                 </div>
-                <div class="col s12 m3">
-                    <div class="timer">
-                        <p class="counter_title_top">Đội ngũ</p>
-                        <h2 id="counter-2" class="time_counter" data-value="63">200</h2>
-                        <p class="counter_title">Nhân viên & Phục vụ</p>
-                    </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="timer">
+                    <p class="counter_title_top">Đội ngũ</p>
+                    <h2 id="counter-2" class="time_counter" data-value="63">200</h2>
+                    <p class="counter_title">Nhân viên & Phục vụ</p>
                 </div>
-                <div class="col s12 m3">
-                    <div class="timer">
-                        <p class="counter_title_top">Hơn</p>
-                        <h2 id="counter-3" class="time_counter" data-value="1200">1200</h2>
-                        <p class="counter_title">Ngày hoạt động</p>
-                    </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="timer">
+                    <p class="counter_title_top">Hơn</p>
+                    <h2 id="counter-3" class="time_counter" data-value="1200">1200</h2>
+                    <p class="counter_title">Ngày hoạt động</p>
                 </div>
-                <div class="col s12 m3">
-                    <div class="timer">
-                        <p class="counter_title_top">Tổ chức hơn</p>
-                        <h2 id="counter-4" class="time_counter" data-value="20">300</h2>
-                        <p class="counter_title">Sự kiện lớn nhỏ</p>
-                    </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="timer">
+                    <p class="counter_title_top">Tổ chức hơn</p>
+                    <h2 id="counter-4" class="time_counter" data-value="20">300</h2>
+                    <p class="counter_title">Sự kiện lớn nhỏ</p>
                 </div>
+            </div>
         </section>
+        <div class="divider"></div>
+        <section id="feedback">
+            <div class="row">
+                <div class="col s10 offset-s1 center-align">
+                    <div class="section-title">
+                        <h5><span>Khách hàng</span> nói về chúng tôi</h5>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row carousel carousel-slider center">
+                <div class="carousel-fixed-item">
+                    <a id="feedback-prev" class="feedback-nav left" href="#">
+                        <i class="fa fa-3x fa-chevron-left" aria-hidden="true"></i>
+                    </a>
+                    <a id="feedback-next" class="feedback-nav right" href="#">
+                        <i class="fa fa-3x fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="carousel-item center-align feedback-item" href="#one!">
+                    <div class="item-content">
+                        <p>Aenean libero sem, commodo sit amet sem nec, aliquet rutrum lectus. Sed elementum, ligula ut elementum convallis, velit nisl semper nisl, id euismod quam eros bibendum urna.</p>
+                        <img class="circle" src="http://lorempixel.com/400/400/people/1" />
+                        <h6>Khanh Luong - KHACH HANG</h6>
+                    </div>
+                </div>
+                <div class="carousel-item center-align feedback-item" href="#two!">
+                    <div class="item-content">
+                        <p>Aenean libero sem, commodo sit amet sem nec, aliquet rutrum lectus. Sed elementum, ligula ut elementum convallis, velit nisl semper nisl, id euismod quam eros bibendum urna.</p>
+                        <img class="circle" src="http://lorempixel.com/400/400/people/2" />
+                        <h6>Khanh Luong - KHACH HANG</h6>
+                    </div>
+                </div>
+                <div class="carousel-item center-align feedback-item" href="#three!">
+                    <div class="item-content">
+                        <p>Aenean libero sem, commodo sit amet sem nec, aliquet rutrum lectus. Sed elementum, ligula ut elementum convallis, velit nisl semper nisl, id euismod quam eros bibendum urna.</p>
+                        <img class="circle" src="http://lorempixel.com/400/400/people/3" />
+                        <h6>Khanh Luong - KHACH HANG</h6>
+                    </div>
+                </div>
+                <div class="carousel-item center-align feedback-item" href="#four!">
+                    <div class="item-content">
+                        <p>Aenean libero sem, commodo sit amet sem nec, aliquet rutrum lectus. Sed elementum, ligula ut elementum convallis, velit nisl semper nisl, id euismod quam eros bibendum urna.</p>
+                        <img class="circle" src="http://lorempixel.com/400/400/people/4" />
+                        <h6>Khanh Luong - KHACH HANG</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
     </main>
 }
