@@ -2857,7 +2857,7 @@ if (jQuery) {
 		  $('a[href="#' + $(element).attr('id') + '"]').click(function(e) {
 		    e.preventDefault();
 		    var offset = $(Materialize.escapeHash(this.hash)).offset().top + 1;
-	    	$('html, body').animate({ scrollTop: offset - options.scrollOffset }, {duration: 400, queue: false, easing: 'easeOutCubic'});
+	    	$('html, body').animate({ scrollTop: offset - options.scrollOffset }, {duration: 800, queue: false, easing: 'easeOutCubic'});
 		  });
 		});
 

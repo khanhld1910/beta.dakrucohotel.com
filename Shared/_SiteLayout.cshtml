@@ -9,10 +9,11 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--materialize.css-->
     <link href="~/Content/stylesheets/materialize.css" rel="stylesheet" media="screen,projection" />
+    <!--font awesome.css-->
+    <link rel="stylesheet" href="~/Content/stylesheets/font-awesome.min.css">
     <!--scripts-->
     <script src="~/Content/myScripts/jquery-3.2.1.js"></script>
     <script src="~/Content/myScripts/materialize.js"></script>
-    <script src="https://use.fontawesome.com/743594bd55.js"></script>
     <script src="~/Content/myScripts/modernizr-2.6.2.js"></script>
     <script src="~/Content/myScripts/myScripts.js"></script>
     <!--optimized for mobile-->
@@ -30,6 +31,13 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
+    <a id="btn-booking" href="#" class="btn waves-effect waves-light pulse">
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>    
+        <span>Đặt phòng</span>
+    </a>
+    <a id="btn-scrolltop" href="#primary-menu" style="display: none;" class="btn waves-effect waves-light">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </a>
     <div class="container z-depth-3">
         @RenderSection("navbar", required: false)
         @RenderSection("header", required: false)

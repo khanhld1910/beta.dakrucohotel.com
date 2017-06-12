@@ -5,21 +5,45 @@
 
  body {
  	background-color: #fff;
+ 	position: relative;
  }
  .clear {
  	clear: both; 
  };
-
- header {
- 	position: relative;
- 	#logo {
- 		z-index: 99;
- 		position: absolute;
- 		padding: 20px;
- 		top: 0px;
- 		left: 0px;		
+ nav {
+ 	.brand-logo {
+ 		height: 100%;
+ 		img {
+ 			height: 100%;
+ 		}
  	}
  }
+
+#btn-scrolltop {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index: 999;
+	padding: 0 1rem;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+#btn-booking {
+	@extend #btn-scrolltop;
+	left: 10px;
+	right: auto;
+	span {
+		display: none;
+	}
+	&:hover {
+		span {
+			display: inline;
+		}
+		i {
+			display: none;
+		}
+	}
+}
 
  .slide-item {
  	background-color: #000;
@@ -63,7 +87,6 @@
  				text-transform: uppercase;
  				span {
  					color: $primary-color-light;
- 					font-weight: 700;
  				}
  			}
  		}
@@ -73,20 +96,20 @@
  				align-items: center;
  			}
  		}
-
+ 		&#about-us {
+ 			margin-top: 40px;
+ 		}
  		&.counter {
  			.timer {
  				border: 1px solid $divider-color;
  				border-radius: 5px;
  				color: $primary-text-color;
- 				font-weight: 300;
  				padding: 10px;
  				text-transform: uppercase;
  				transition: .5s;
  				-webkit-transition: .5s;
  				h2 {
  					color: $primary-color-light;
- 					font-weight: 700;
  				}
  				&:hover {
  					@extend .z-depth-2;
@@ -121,7 +144,6 @@
  				h6 {
  					text-transform: uppercase;
  					color: $primary-color-light;
- 					font-weight: 700;
  				}
  			} 						
  		}
@@ -140,20 +162,17 @@
  				img {
 
  				}
- 				h3 {
+ 				h4 {
  					text-transform: uppercase;
- 					font-size: 25px;
- 					font-weight: 300;
  					color: $primary-color-light;
  					letter-spacing: .5px;
  				}
  				p {
- 					font-size: 14px;
+
  				}
  				h5 {
  					margin: 10px 0px;
  					span {
- 						font-weight: 700; 
  						color: $primary-text-color;						
  					}
  					font-weight: 300;
@@ -193,20 +212,15 @@
  			margin: 0px;
  			border-bottom: 1px solid $divider-color;
  			.contact-meta {
- 				h4 {
+ 				h6 {
  					text-transform: uppercase;
- 					font-weight: 500;
  					letter-spacing: .5px;
- 					font-size: 24px;
  					color: $primary-color-light;
- 					span {
- 						font-size: 20px;
- 					}
  				}
  				address {
  					color: $primary-text-color;
+ 					font-family: "Dakruco", san-serif;
  					padding-left: 2em;
- 					font-weight: 300;
  					font-style: normal;
  				}
  			}
@@ -225,12 +239,9 @@
  	}
  	.post-preview {
  		.post-title {
- 			font-size: 20px;
- 			text-transform: uppercase;
  			margin-top: 0px;
  			a {
- 				letter-spacing: .5px;
- 				font-weight: 300;
+ 				letter-spacing: .3px;
  				&:hover {
  					color: $primary-color;
  				}
@@ -242,11 +253,11 @@
  		}
  		.post-meta {
  			color: $link-color;
- 			font-size: 13px;
  		}
  	}
  }
  footer {
+	
  	.footer-meta {
  		padding: 20px;
  		.footer-meta-review {
@@ -276,7 +287,6 @@
  		border-top: 1px solid $primary-color-light;		
  		.footer-copyright-meta {
  			color: $primary-color-text;
- 			font-weight: 300;
  			width: 100%;
  			ul.social-links {
  				margin: 0px;

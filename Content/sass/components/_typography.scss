@@ -1,4 +1,20 @@
+@font-face {
+    font-family: "Dakruco";
+    src: url("../fonts/Dakruco-Regular.woff") format("woff");
+    font-weight: 300;
+}
 
+@font-face {
+    font-family: "Dakruco Light";
+    src: url("../fonts/Dakruco-Light.woff") format("woff");
+
+}
+
+@font-face {
+    font-family: "Dakruco SemiBold";
+    src: url("../fonts/Dakruco-SemiBold.woff") format("woff");
+    font-weight: 500;
+}
 
 
 a {
@@ -9,23 +25,22 @@ html{
   line-height: 1.5;
 
   @media only screen and (min-width: 0) {
-    font-size: 14px;
-  }
-
-  @media only screen and (min-width: $medium-screen) {
-    font-size: 14.5px;
-  }
-
-  @media only screen and (min-width: $large-screen) {
     font-size: 15px;
   }
 
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
+  @media only screen and (min-width: $medium-screen) {
+    font-size: 15.5px;
+  }
+
+  @media only screen and (min-width: $large-screen) {
+    font-size: 16px;
+  }
+
+  font-family: "Dakruco", san-serif;
   color: $primary-text-color;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 400;
+	font-weight: 500;
 	line-height: 1.1;
 }
 

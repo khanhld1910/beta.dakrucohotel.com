@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $('.scrollspy').scrollSpy();
     $('.slider').slider({
         indicators: false,
         height: 400,
@@ -51,6 +52,20 @@
         $(this).children().height(maxHeight);
         //console.log(heights);
     });
+
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        //console.log($("#navbar").height());
+        if ($(window).scrollTop() < 500) {
+            $("#btn-scrolltop").hide();
+
+        } else {
+             // scroll over navbar
+            $("#btn-scrolltop").show();
+        }
+        // Do something
+    });
+
     // My Coding-Styles Romance by L.D.K aka "Dolphin Dreams"
 
 });
