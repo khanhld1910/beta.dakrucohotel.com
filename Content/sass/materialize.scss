@@ -11,9 +11,6 @@
 // Reset
 @import "components/normalize";
 
-// my Color's Palette
-@import "components/palette";
-//  my feature's section style
 
 // components
 @import "components/global";
@@ -47,5 +44,6 @@
 @import "components/date_picker/default.date";
 @import "components/date_picker/default.time";
 
+//  my feature's section style
 // main styles
 @import "components/screen";

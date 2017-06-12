@@ -2,11 +2,6 @@
     Layout = "~/Shared/_SiteLayout.cshtml";
     Page.Title = "Trang Chủ";
 }
-
-@section adminbar {
-    @RenderPage("~/Shared/_AdminBar.cshtml")
-}
-
 @section navbar {
     @RenderPage("~/Shared/_NavBar.cshtml")
 }
@@ -118,10 +113,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col s12 m12 l6 valign-wrapper">
-                    <div class="feature-col img-col">
-                        <img src="~/Images/PageImgs/why-choose-us.jpg" alt="why choose us" class="responsive-img" />
-                    </div>
+                <div class="col s12 m12 l6 valign-wrapper feature-col img-col">
+                    <img src="~/Images/PageImgs/why-choose-us.jpg" alt="why choose us" class="responsive-img" />
                 </div>
             </div>
         </section>
@@ -153,6 +146,59 @@
                     <p class="counter_title_top">Tổ chức hơn</p>
                     <h2 id="counter-4" class="time_counter" data-value="20">300</h2>
                     <p class="counter_title">Sự kiện lớn nhỏ</p>
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <section id="showrooms">
+            <div class="row">
+                <div class="col s10 offset-s1 center-align">
+                    <div class="section-title">
+                        <h5>Phòng nghỉ <span>Dakruco Hotel</span></h5>
+                        <div class="line"></div>
+                        <p>Aenean libero sem, commodo sit amet sem nec, aliquet rutrum lectus. Sed elementum, ligula ut elementum convallis, velit nisl semper nisl, id euismod quam eros bibendum urna.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m4 l4">
+                    <div class="room-item">
+                        <img class="responsive-img" src="http://lorempixel.com/400/400/abstract/1" alt="">
+                        <h3>Deluxe Room</h3>
+                        <p>
+                            Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+                        </p>
+                        <h5>
+                            <span>$95.00</span> / per night
+                        </h5>
+                        <a href="#" class="waves-effect waves-teal btn-flat booking">Đặt phòng</a>
+                    </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="room-item">
+                        <img class="responsive-img" src="http://lorempixel.com/400/400/abstract/2" alt="">
+                        <h3>Deluxe Room</h3>
+                        <p>
+                            Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+                        </p>
+                        <h5>
+                            <span>$102.00</span> / per night
+                        </h5>
+                        <a href="#" class="waves-effect waves-teal btn-flat booking">Đặt phòng</a>
+                    </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="room-item">
+                        <img class="responsive-img" src="http://lorempixel.com/400/400/abstract/3" alt="">
+                        <h3>Deluxe Room</h3>
+                        <p>
+                            Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+                        </p>
+                        <h5>
+                            <span>$80.00</span> / per night
+                        </h5>
+                        <a href="#" class="waves-effect waves-teal btn-flat booking">Đặt phòng</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -206,5 +252,174 @@
             </div>
         </section>
         <div class="divider"></div>
+        <section id="news">
+            <div class="row">
+                <div class="col s10 offset-s1 center-align">
+                    <div class="section-title">
+                        <h5>Tin <span>Khuyến mãi & Bài viết</span></h5>
+                        <div class="line"></div>
+                        <p>Aenean libero sem, commodo sit amet sem nec, aliquet rutrum lectus.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <article class="post-item row">
+                        <a class="col s12 m4 post-link" href="#">
+                            <img class="responsive-img" src="http://www.lorempixel.com/350/300/business" />
+                        </a>
+                        <div class="col s12 m8 post-preview">
+                            <h5 class="post-title">
+                                <a href="#">
+                                    Simple blog post
+                                </a>
+                            </h5>
+                            <p class="post-shorttext">
+                                Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat
+                            </p>
+                            <div class="post-meta">
+                                <span class="post-meta-author left">
+                                    By admin
+                                </span>
+                                <span class="post-meta-time right">
+                                    10, Tháng 6, 2017
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col s12">
+                    <article class="post-item row">
+                        <a class="col s12 m4 post-link" href="#">
+                            <img class="responsive-img" src="http://www.lorempixel.com/350/300/business" />
+                        </a>
+                        <div class="col s12 m8 post-preview">
+                            <h5 class="post-title">
+                                <a href="#">
+                                    Simple blog post
+                                </a>
+                            </h5>
+                            <p class="post-shorttext">
+                                Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat
+                            </p>
+                            <div class="post-meta">
+                                <span class="post-meta-author left">
+                                    By admin
+                                </span>
+                                <span class="post-meta-time right">
+                                    10, Tháng 6, 2017
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col s12">
+                    <article class="post-item row">
+                        <a class="col s12 m4 post-link" href="#">
+                            <img class="responsive-img" src="http://www.lorempixel.com/350/300/business" />
+                        </a>
+                        <div class="col s12 m8 post-preview">
+                            <h5 class="post-title">
+                                <a href="#">
+                                    Simple blog post
+                                </a>
+                            </h5>
+                            <p class="post-shorttext">
+                                Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat
+                            </p>
+                            <div class="post-meta">
+                                <span class="post-meta-author left">
+                                    By admin
+                                </span>
+                                <span class="post-meta-time right">
+                                    10, Tháng 6, 2017
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col s12">
+                    <article class="post-item row">
+                        <a class="col s12 m4 post-link" href="#">
+                            <img class="responsive-img" src="http://www.lorempixel.com/350/300/business" />
+                        </a>
+                        <div class="col s12 m8 post-preview">
+                            <h5 class="post-title">
+                                <a href="#">
+                                    Simple blog post
+                                </a>
+                            </h5>
+                            <p class="post-shorttext">
+                                Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat
+                            </p>
+                            <div class="post-meta">
+                                <span class="post-meta-author left">
+                                    By admin
+                                </span>
+                                <span class="post-meta-time right">
+                                    10, Tháng 6, 2017
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="map">
+            <div class="overlay" onClick="style.pointerEvents='none'"></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3892.306456877257!2d108.06422131424866!3d12.693409991038799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171f7c6a365a535%3A0xfd7a7fd5bf197cf4!2zS2jDoWNoIHPhuqFuIERha3J1Y28!5e0!3m2!1svi!2s!4v1497185668005" frameborder="0" allowfullscreen></iframe>
+        </section>
+        <section id="contact">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="contact-meta contact-meta-address">
+                        <h4>
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-building fa-stack-1x fa-inverse"></i>
+                            </span>
+                            Địa chỉ
+                        </h4>
+                        <address>
+                            30 Nguyễn Chí Thanh<br />
+                            Tân An, TP. Buôn Ma Thuột<br />
+                            DakLak, Việt Nam
+                        </address>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="contact-meta contact-meta-phone">
+                        <h4>
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                            </span>
+                            Điện thoại
+                        </h4>
+                        <address>
+                            Phone: (84-500) 3970.777<br />
+                            Phone: (84-500) 3970.888<br />
+                            Fax: (84-500) 3970.889
+                        </address>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="contact-meta contact-meta-email">
+                        <h4>
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                            Email
+                        </h4>
+                        <address>
+                            sales@dakrucohotels.com<br />
+                            info@dakrucohotels.com<br />
+                            dosm@dakrucohotels.com
+                        </address>
+                    </div>
+                </div>               
+            </div>
+        </section>
     </main>
 }

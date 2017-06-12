@@ -39,7 +39,7 @@
  #admin-bar {
  	height: 32px;
  	padding: 5px;
- 	background-color: $primary-color-dark;
+ 	background-color: $primary-color;
  	border-bottom: 1px solid $divider-color;
  	& * {
  		color: $primary-color-text;
@@ -47,22 +47,22 @@
  }
 
  main {
- 	background-color: $main-background-color;
- 	padding: 20px;
+ 	background-color: $secondary-color;
+ 	padding: 0px;
  	section {
- 		margin-top: 20px;
-
+ 		margin: 20px 0px;
+ 		padding: 20px;
  		.section-title {
  			.line {
  				height: 2px;
- 				background-color: $primary-color-dark;
+ 				background-color: $primary-color-light;
  				width: 25%;
  				margin: 0 auto 20px;
  			}
  			h5 {
  				text-transform: uppercase;
  				span {
- 					color: $primary-color;
+ 					color: $primary-color-light;
  					font-weight: 700;
  				}
  			}
@@ -76,46 +76,246 @@
 
  		&.counter {
  			.timer {
- 				background-color: rgba(0, 0, 0, 0.2);
- 				color: $secondary-text-color;
+ 				border: 1px solid $divider-color;
+ 				border-radius: 5px;
+ 				color: $primary-text-color;
+ 				font-weight: 300;
  				padding: 10px;
  				text-transform: uppercase;
+ 				transition: .5s;
+ 				-webkit-transition: .5s;
  				h2 {
- 					color: $primary-color;
+ 					color: $primary-color-light;
  					font-weight: 700;
+ 				}
+ 				&:hover {
+ 					@extend .z-depth-2;
+ 					border-color: $primary-color-light;
  				}
  			}
  		}
  		&#feedback .carousel {
- 				min-height: 230px;
- 				.carousel-fixed-item {
- 					bottom: 50%;
- 					.feedback-nav {
- 						-ms-transform: translateY(50%); /* IE 9 */
- 						-webkit-transform: translateY(50%); /* Safari */
- 						transform: translateY(50%);
- 						display: none;
- 						padding: 0 10px;
+ 			min-height: 230px;
+ 			.carousel-fixed-item {
+ 				bottom: 50%;
+ 				.feedback-nav {
+ 					-ms-transform: translateY(50%); /* IE 9 */
+ 					-webkit-transform: translateY(50%); /* Safari */
+ 					transform: translateY(50%);
+ 					display: none;
+ 					padding: 0 10px;
+ 				}
+ 			}
+ 			.carousel-item {
+ 				padding: 0 5%;
+ 				p {
+ 					color: $secondary-text-color;
+ 				}
+ 				img {
+ 					width: 100px;
+ 					height: 100px;
+ 					border: 3px solid $primary-color-light;
+ 					margin: 5px auto;
+
+ 				}
+ 				h6 {
+ 					text-transform: uppercase;
+ 					color: $primary-color-light;
+ 					font-weight: 700;
+ 				}
+ 			} 						
+ 		}
+ 		&#showrooms {
+ 			.room-item { 				
+ 				transition: .5s;
+ 				-webkit-transition: .5s;
+ 				&:hover {
+ 					border: 1px solid $primary-color-light;
+ 					@extend .z-depth-2;
+ 				}
+ 				text-align: center;
+ 				border: 1px solid $divider-color;
+ 				padding: 5%;
+ 				color: $secondary-text-color;
+ 				img {
+
+ 				}
+ 				h3 {
+ 					text-transform: uppercase;
+ 					font-size: 25px;
+ 					font-weight: 300;
+ 					color: $primary-color-light;
+ 					letter-spacing: .5px;
+ 				}
+ 				p {
+ 					font-size: 14px;
+ 				}
+ 				h5 {
+ 					margin: 10px 0px;
+ 					span {
+ 						font-weight: 700; 
+ 						color: $primary-text-color;						
+ 					}
+ 					font-weight: 300;
+
+ 				}
+ 				a.booking {
+ 					color: $primary-color-text;
+ 					background-color: $primary-color-light;
+ 					margin: 15px 0px;
+ 					&:hover {
+ 						background-color: $primary-color;
  					}
  				}
- 				.carousel-item {
- 					padding: 0 5%;
- 					p {
- 						color: $secondary-text-color;
+ 			}
+ 		}
+ 		&#map {
+ 			height: 300px;
+ 			padding: 0px;
+ 			border-bottom: 1px solid $divider-color;
+ 			border-top: 1px solid $divider-color;
+ 			position: relative;
+ 			.overlay {
+ 				position: absolute;
+ 				top: 0;
+ 				left: 0;
+ 				background: transparent;
+ 				width: 100%;
+ 				height: 300px;
+ 				z-index: 2;
+ 			}
+ 			iframe {
+ 				width: 100%;
+ 				height: 100%;
+ 			}
+ 		}
+ 		&#contact {
+ 			margin: 0px;
+ 			border-bottom: 1px solid $divider-color;
+ 			.contact-meta {
+ 				h4 {
+ 					text-transform: uppercase;
+ 					font-weight: 500;
+ 					letter-spacing: .5px;
+ 					font-size: 24px;
+ 					color: $primary-color-light;
+ 					span {
+ 						font-size: 20px;
  					}
- 					img {
- 						width: 100px;
- 						height: 100px;
- 						border: 3px solid $secondary-text-color;
- 						margin: 5px auto;
+ 				}
+ 				address {
+ 					color: $primary-text-color;
+ 					padding-left: 2em;
+ 					font-weight: 300;
+ 					font-style: normal;
+ 				}
+ 			}
+ 		}
+ 	}
+ }
 
+ .post-item {
+ 	.post-link {
+ 		img {
+ 			width: 100%;
+ 			height: auto;
+ 			max-height: 150px;
+ 			object-fit: cover;
+ 		}
+ 	}
+ 	.post-preview {
+ 		.post-title {
+ 			font-size: 20px;
+ 			text-transform: uppercase;
+ 			margin-top: 0px;
+ 			a {
+ 				letter-spacing: .5px;
+ 				font-weight: 300;
+ 				&:hover {
+ 					color: $primary-color;
+ 				}
+ 			}
+ 		}
+ 		.post-shorttext {
+ 			color: $secondary-text-color;
+ 			text-align: justify;
+ 		}
+ 		.post-meta {
+ 			color: $link-color;
+ 			font-size: 13px;
+ 		}
+ 	}
+ }
+ footer {
+ 	.footer-meta {
+ 		padding: 20px;
+ 		.footer-meta-review {
+ 			img {
+ 				max-width: 100%;
+ 				margin: 0 auto;
+ 			}
+ 		}
+ 		.footer-meta-links {
+ 			ul {
+ 				margin: 0 auto;
+ 				li {
+ 					&:hover { 						
+	 					a {
+	 						opacity: 1;
+	 					}
  					}
- 					h6 {
- 						text-transform: uppercase;
- 						color: $primary-color;
- 						font-weight: 700;
+ 					a {
+ 						color: $primary-color-text;
+ 						opacity: 0.5;
  					}
- 				} 						
+ 				}
+ 			}
+ 		}
+ 	}
+ 	.footer-copyright { 
+ 		border-top: 1px solid $primary-color-light;		
+ 		.footer-copyright-meta {
+ 			color: $primary-color-text;
+ 			font-weight: 300;
+ 			width: 100%;
+ 			ul.social-links {
+ 				margin: 0px;
+ 				padding: 0px;
+ 				li {
+ 					float: left;
+ 					padding: 0 10px;
+ 					position: relative;
+					&::after {
+						position: absolute;
+						top: 10%;
+						right: 0;
+						display: block;
+						content: "";
+						width: 1px;
+						height: 80%;
+						margin: auto 0px;
+						background-color: $primary-color-text;
+						opacity: 0.5;
+					}
+ 					&:last-child {
+ 						&::after {
+ 							content: none;
+ 						}
+ 						a {
+ 							border: none;
+ 						}
+ 					}
+ 					&:hover { 						
+	 					a {
+	 						opacity: 1;
+	 					}
+ 					}
+ 					a {
+ 						color: $primary-color-text;
+ 						opacity: 0.5;
+ 					}
+ 				}
+ 			}
  		}
  	}
  }
