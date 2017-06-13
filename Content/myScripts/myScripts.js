@@ -66,6 +66,11 @@
         // Do something
     });
 
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+
     // My Coding-Styles Romance by L.D.K aka "Dolphin Dreams"
 
 });

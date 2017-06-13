@@ -1,28 +1,76 @@
-﻿<nav id="primary-menu" class="scrollspy">
+﻿@{ 
+    int pageInt = Page.ActivePage;
+
+    string news = "";
+    string rooms = "";
+    string tours = "";
+    string food = "";
+    string events = "";
+    string album = "";
+
+    switch (pageInt) {
+        case 1: news = "active"; break;
+        case 2: rooms = "active"; break;
+        case 3: tours = "active"; break;
+        case 4: food = "active"; break;
+        case 5: events = "active"; break;
+        case 6: album = "active"; break;
+    };
+}
+
+<nav id="primary-menu" class="scrollspy container">
     <div class="nav-wrapper">
         <a href="~/" class="brand-logo">
-            <img class="responsive-img" src="~/Images/logo-small.png" />
+            <img src="~/Images/logo-small.png" />
         </a>
         <a href="#" data-activates="mobile-demo" class="button-collapse">
             <i class="material-icons">menu</i>
         </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">Tin tức</a></li>
-            <li><a href="#">Phòng nghỉ</a></li>
-            <li><a href="#">Tours</a></li>
-            <li><a href="#">Ẩm thực</a></li>
-            <li><a href="#">Sự kiện</a></li>
-            <li><a href="#">Hình ảnh</a></li>
-            <li><a href="#">Liên hệ</a></li>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">            
+            <li class="nav-item @news">
+                <a href="#">Tin tức</a>
+            </li>
+            <li class="nav-item @rooms">
+                <a href="~/Rooms">Phòng nghỉ</a>
+            </li>
+            <li class="nav-item @tours">
+                <a href="#">Tours</a>
+            </li>
+            <li class="nav-item @food">
+                <a href="#">Ẩm thực</a>
+            </li>
+            <li class="nav-item @events">
+                <a href="#">Sự kiện</a>
+            </li>
+            <li class="nav-item @album">
+                <a href="#">Hình ảnh</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact">Liên hệ</a>
+            </li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-            <li><a href="#">Tin tức</a></li>
-            <li><a href="#">Phòng nghỉ</a></li>
-            <li><a href="#">Tours</a></li>
-            <li><a href="#">Ẩm thực</a></li>
-            <li><a href="#">Sự kiện</a></li>
-            <li><a href="#">Hình ảnh</a></li>
-            <li><a href="#">Liên hệ</a></li>
+            <li class="nav-item @news">
+                <a href="#">Tin tức</a>
+            </li>
+            <li class="nav-item @rooms">
+                <a href="~/Rooms">Phòng nghỉ</a>
+            </li>
+            <li class="nav-item @tours">
+                <a href="#">Tours</a>
+            </li>
+            <li class="nav-item @food">
+                <a href="#">Ẩm thực</a>
+            </li>
+            <li class="nav-item @events">
+                <a href="#">Sự kiện</a>
+            </li>
+            <li class="nav-item @album">
+                <a href="#">Hình ảnh</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact">Liên hệ</a>
+            </li>
         </ul>
     </div>
 </nav>

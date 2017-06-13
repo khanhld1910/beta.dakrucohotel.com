@@ -15,6 +15,28 @@
  		height: 100%;
  		img {
  			height: 100%;
+ 			padding: 0 10px;
+ 		}
+ 	}
+ }
+
+ header {
+ 	&.small-header {
+ 		display: flex;
+ 		height: 350px;
+ 		position: relative;
+ 		background-color: $primary-color;
+ 		img {
+ 			width: 100%;
+ 			object-fit: cover;
+ 			opacity: 0.8;
+ 		}
+ 		.page-preview {
+ 			position: absolute;
+ 			bottom: 0px;
+ 			left: 0px;
+ 			width: 70%;
+ 			background-color: rgba(0,0,0,0.5);
  		}
  	}
  }
@@ -326,6 +348,11 @@
  					}
  				}
  			}
+ 		}
+ 		.contact-meta-social {
+ 			.fb-page {
+ 				max-width: 90%;
+ 			} 			
  		}
  	}
  }

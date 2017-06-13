@@ -117,8 +117,14 @@ nav {
       float: left;
       padding: 0;
 
+      &:hover {
+        background-color: $primary-color-light;
+      }
+
       &.active {
-        background-color: rgba(0,0,0,.1);
+        background-color: $primary-color-light;
+        border-left: 1px solid $primary-color;
+        border-right: 1px solid $primary-color;
       }
     }
     a {
@@ -129,7 +135,7 @@ nav {
       font-weight: 300;
       letter-spacing: .3px;
       display: block;
-      padding: 0 15px;
+      padding: 0 10px;
       cursor: pointer;
 
       &.btn, &.btn-large, &.btn-flat, &.btn-floating {
@@ -142,11 +148,7 @@ nav {
           line-height: inherit;
         }
       }
-
-      &:hover {
-        background-color: $secondary-color;
-        color: $primary-text-color;
-      }
+      
     }
 
     &.left {
@@ -193,7 +195,7 @@ nav {
 .navbar-fixed {
   position: relative;
   height: $navbar-height-mobile;
-  z-index: 997;
+  z-index: 996;
 
   nav {
     position: fixed;
